@@ -1,6 +1,6 @@
 Docker Sentinel Image
 =====================
-Run [Sentinel][1] in Docker.
+A Docker base image which includes [Sentinel][1].
 
 Building
 --------
