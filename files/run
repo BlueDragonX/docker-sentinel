@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+CONFIG=/etc/sentinel/config.yml
+DOWN=/etc/service/sentinel/down
+
+if [[ -e "$CONFIG" ]]; then
+	test -e "$DOWN" && rm "$DOWN"
+	exec /usr/share/go/bin/sentinel -config "$CONFIG"
+else
+	touch "$DOWN"
+fi
